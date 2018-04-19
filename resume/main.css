@@ -1,0 +1,136 @@
+:root {
+  --font-family: 'Lato', 'Open Sans', 'Helvetica Neue', 'Helvetica', sans-serif;
+  --font-monospace: 'DejaVu Sans Mono', 'Fira Code', 'Courier New', Courier, monospace;
+  --border-main: 2px solid #ccc;
+  --left-width: 63%;
+  --heading-transform: uppercase;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: none;
+}
+
+html {
+  font-size: 16px;
+  line-height: 1.4;
+}
+
+body {
+  background: #fff;
+  width: 21cm;
+  height: 29.7cm;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  font-family: var(--font-family);
+  text-rendering: optimizeLegibility;
+}
+
+hr {
+  margin: 1.2em 0;
+  background: none;
+  border: none;
+  border-top: var(--border-main);
+  height: 2px;
+}
+
+img {
+  max-width: 100%;
+}
+
+img.icon {
+  max-width: 16px;
+  margin-right: 0.5em;
+}
+
+a {
+  color: #0d4ac5;
+}
+
+.monospace {
+  font-family: var(--font-monospace);
+}
+
+h1, h2, strong {
+  font-weight: 700;
+}
+
+h1 {
+  font-size: 2.8em;
+  text-transform: var(--heading-transform);
+  padding: 0.5em 0.5em 0.2em;
+  line-height: 1.1;
+}
+
+h1 span:nth-child(2) {
+  font-weight: 400;
+}
+
+main {
+  display: flex;
+  border-top: var(--border-main);
+  height: 100%;
+  overflow: hidden;
+}
+
+main .left,
+main .right {
+  padding: 0.5em 1em;
+}
+
+main .left {
+  width: var(--left-width);
+  border-right: var(--border-main);
+}
+
+main .right {
+  width: calc(100% - var(--left-width));
+}
+
+h2 {
+  margin: 0.6em 0;
+  font-size: 1.4em;
+  line-height: 1.2;
+  text-transform: var(--heading-transform);
+  position: relative;
+}
+
+h2:after {
+  position: absolute;
+  display: block;
+  content: "";
+  width: 40px;
+  height: 0;
+  border-bottom: var(--border-main);
+}
+
+.education {
+  display: flex;
+}
+
+.education>div:nth-child(1) {
+  padding-right: 0.5em;
+}
+
+.education>div:nth-child(2) {
+  padding-left: 0.5em;
+}
+
+div>ul>li {
+  margin-left: 1em;
+}
+
+.projects>ul>li {
+  margin-bottom: 0.6em;
+}
+
+div>ul>li li {
+  margin-left: 1em;
+}
+
+.contact {
+  font-size: 0.9em;
+}
