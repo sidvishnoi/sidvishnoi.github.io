@@ -63,10 +63,23 @@ h1 {
   text-transform: var(--heading-transform);
   padding: 0.5em 0.5em 0.2em;
   line-height: 1.1;
+  position: relative;
 }
 
 h1 span:nth-child(2) {
   font-weight: 400;
+}
+
+h1 a {
+  display: inline-block;
+  float: right;
+  position: absolute;
+  bottom: 1em;
+  right: 0;
+  font-size: 14px;
+}
+h1 a img {
+  max-width: 14px;
 }
 
 main {
@@ -133,4 +146,10 @@ div>ul>li li {
 
 .contact {
   font-size: 0.9em;
+}
+
+@media only print {
+  .noprint {
+    display: none;
+  }
 }
