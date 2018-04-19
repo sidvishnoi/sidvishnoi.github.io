@@ -3,6 +3,7 @@
   --font-monospace: 'DejaVu Sans Mono', 'Fira Code', 'Courier New', Courier, monospace;
   --border-main: 2px solid #ccc;
   --left-width: 63%;
+  --right-width: 37%;
   --heading-transform: uppercase;
 }
 
@@ -54,7 +55,9 @@ a {
   font-family: var(--font-monospace);
 }
 
-h1, h2, strong {
+h1,
+h2,
+strong {
   font-weight: 700;
 }
 
@@ -72,12 +75,12 @@ h1 span:nth-child(2) {
 
 h1 a {
   display: inline-block;
-  float: right;
   position: absolute;
   bottom: 1em;
   right: 0;
   font-size: 14px;
 }
+
 h1 a img {
   max-width: 14px;
 }
@@ -100,7 +103,7 @@ main .left {
 }
 
 main .right {
-  width: calc(100% - var(--left-width));
+  width: var(--right-width);
 }
 
 h2 {
@@ -151,5 +154,42 @@ div>ul>li li {
 @media only print {
   .noprint {
     display: none;
+  }
+}
+
+@media screen and (max-width: 42em) {
+  :root {
+    --left-width: 100%;
+    --right-width: 100%;
+  }
+  body {
+    width: 100%;
+    height: 100%;
+  }
+  main {
+    flex-direction: column;
+    border-top: none;
+  }
+  main .left {
+    border-right: none;
+  }
+  h1 {
+    margin-top: 0.5em;
+    font-size: 2em;
+    box-shadow: 0 2px 2px 0px #f1efef;
+  }
+  .education {
+    flex-direction: column;
+  }
+  .education>div:nth-child(n+1) {
+    padding: 0.4em 0;
+  }
+  h1 a {
+    font-size: 12px;
+    top: -0.5em;
+    right: 1em;
+  }
+  h1 a img {
+    max-width: 12px;
   }
 }
