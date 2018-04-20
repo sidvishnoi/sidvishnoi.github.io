@@ -17,10 +17,11 @@ function syntaxHighlight(json) {
 }
 
 (() => {
+  const isMobile = window.innerWidth < 640;
   const $skills = document.getElementById('skills');
   const content = JSON.parse($skills.innerText);
   let skills = JSON.stringify(content, (k,v) => {
-    if (v instanceof Array) return JSON.stringify(v);
+    if (!isMobile && v instanceof Array) return JSON.stringify(v);
     return v;
   }, 2);
   skills = skills.split('"[').join("[")
