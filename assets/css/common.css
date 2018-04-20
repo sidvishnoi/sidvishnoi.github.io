@@ -160,7 +160,11 @@ ul>li {
 
 main {
   max-width: 700px;
-  margin: 0 auto;
+  margin: 0 auto 2em;
+}
+
+main p {
+  max-width: 100%;
 }
 
 main>ul>li,
