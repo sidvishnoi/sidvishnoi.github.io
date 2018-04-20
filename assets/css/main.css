@@ -1,0 +1,14 @@
+.summary {
+  display: flex;
+  align-items: center;
+  align-content: center;
+  border: 0.3em solid #000;
+}
+
+.summary .text {
+  padding: 1em;
+}
+
+.avatar {
+  max-height: 192px;
+}
