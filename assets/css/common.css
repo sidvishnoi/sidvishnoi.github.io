@@ -30,11 +30,13 @@ img {
   max-width: 100%;
 }
 
-pre, code {
+pre,
+code {
   font-family: var(--font-family-monospace)
 }
 
-p {
+p,
+li {
   max-width: 620px;
   font-family: var(--font-family-body);
 }
@@ -154,4 +156,48 @@ ul>li {
     width: calc(100% - 1em);
     margin: 0.5em auto;
   }
+}
+
+main {
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+main>ul>li,
+main>ol>li {
+  margin-left: 2em;
+}
+
+main h2,
+main h3 {
+  margin: 0.5em auto;
+}
+
+main blockquote {
+  padding: 0 1em;
+  color: #6a737d;
+  margin: 1em auto;
+  border-left: 0.25em solid #dfe2e5;
+}
+
+main img {
+  display: block;
+  margin: 0.5em auto;
+}
+
+main .meta {
+  display: flex;
+  padding: 0.2em 0;
+  justify-content: space-between;
+}
+
+main .meta p {
+  margin: 0.5em 0;
+  max-width: 100%;
+}
+
+main .meta img {
+  display: inline-block;
+  margin: 0;
+  width: 16px;
 }
