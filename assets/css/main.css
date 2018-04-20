@@ -17,9 +17,22 @@ time {
   color: #444;
   font-size: 95%;
 }
+
 time:before {
   content: "("
 }
+
 time:after {
   content: ")"
+}
+
+@media screen and (max-width: 42em) {
+  .summary {
+    border: none;
+    border-bottom: 0.5em solid;
+    flex-direction: column;
+  }
+  .summary .text {
+    padding: 1em 0 0;
+  }
 }

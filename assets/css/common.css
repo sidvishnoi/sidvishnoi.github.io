@@ -145,3 +145,10 @@ ul>li {
   width: 24px;
   height: 24px;
 }
+
+@media screen and (max-width: 42em) {
+  body {
+    width: calc(100% - 1em);
+    margin: 0.5em auto;
+  }
+}
