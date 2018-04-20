@@ -62,10 +62,12 @@ header {
   padding: 1em;
   border: 0.5em solid #fff;
   background: #000;
+  text-align: center;
 }
 
 h1 {
   font-size: 2.4em;
+  line-height: 1.2;
 }
 
 h1 a {
@@ -81,6 +83,7 @@ header p {
   font-family: var(--font-family);
   text-transform: uppercase;
   color: #ccc;
+  max-width: 100%;
 }
 
 section {
