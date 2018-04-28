@@ -21,7 +21,8 @@ html {
 
 body {
   background: #fff;
-  width: 21cm;
+  width: 100%;
+  max-width: 21cm;
   height: 29.7cm;
   margin: 0 auto;
   display: flex;
@@ -31,7 +32,7 @@ body {
 }
 
 hr {
-  margin: 1.2em 0;
+  margin: 1.1em 0;
   background: none;
   border: none;
   border-top: var(--border-main);
@@ -62,7 +63,7 @@ strong {
 }
 
 h1 {
-  font-size: 2.8em;
+  font-size: 2.5em;
   text-transform: var(--heading-transform);
   padding: 0.5em 0.5em 0.2em;
   line-height: 1.1;
@@ -108,7 +109,7 @@ main .right {
 
 h2 {
   margin: 0.6em 0;
-  font-size: 1.4em;
+  font-size: 1.35em;
   line-height: 1.2;
   text-transform: var(--heading-transform);
   position: relative;
@@ -154,6 +155,10 @@ div>ul>li li {
 @media only print {
   .noprint {
     display: none;
+  }
+
+  body {
+    width: 21cm;
   }
 }
 
