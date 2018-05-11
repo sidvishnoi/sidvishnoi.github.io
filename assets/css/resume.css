@@ -23,8 +23,8 @@ body {
   background: #fff;
   width: 100%;
   max-width: 21cm;
-  height: 29.7cm;
   margin: 0 auto;
+  height: 100%;
   display: flex;
   flex-direction: column;
   font-family: var(--font-family);
@@ -158,7 +158,9 @@ div>ul>li li {
   }
 
   body {
+    /* A4 sheet */
     width: 21cm;
+    height: 29.7cm;
   }
 }
 

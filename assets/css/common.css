@@ -62,8 +62,9 @@ a:visited {
 header {
   padding: 1em;
   border: 0.5em solid #fff;
-  background: #000;
+  background: #115;
   text-align: center;
+  text-shadow: 1px 0 #000;
 }
 
 h1 {
