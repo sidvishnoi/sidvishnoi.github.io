@@ -7,7 +7,6 @@
   <title>Sudhanshu Vishnoi | Resume</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" type="text/css" media="all" href="/assets/css/resume.css" />
-  <link href="https://fonts.googleapis.com/css?family=Lato:400,700" rel="stylesheet">
   <meta name="description" content="Sudhanshu Vishnoi (Sid Vishnoi) is passionate about web development and problem solving. He loves to work with JavaScript and C++.">
 </head>
 
@@ -23,6 +22,7 @@
       <div>
         <p><strong>Google Summer of Code (GSoC)</strong></p>
         <p>Worked on ReSpec under Mozilla (<a href="https://goo.gl/y9ZiyT">goo.gl/y9ZiyT</a>)</p>
+        <p>Developed new features with a focus on UX, automation and maintainability.</p>
         <p>April 23, 2018 - present</p>
       </div>
       <hr>
@@ -69,14 +69,13 @@
             <ul>
               <li>made use of Unix network sockets API</li>
               <li>features user authentication, multiple chat-rooms and private messaging &amp; terminal based user interface (inspired by IRC)</li>
-              <li>implemented a persistent object-based database to store data</li>
             </ul>
           </li>
           <li>
             <strong>du -cs : www.ducs.in</strong>
             (<a href="https://sidvishnoi.github.io/ducs/">sidvishnoi.github.io/ducs</a>)
             <ul>
-              <li>Created unofficial website for department</li>
+              <li>created unofficial website for department</li>
               <li>hosted dept activities like Sankalan (annual tech fest) and Srijan (annual magazine).</li>
             </ul>
           </li>
@@ -136,14 +135,13 @@
           <li>
             <strong>Web Development</strong>
             <ul>
-              <li>HTML, Pug, EJS, HyperHTML</li>
+              <li>HTML, Pug, HyperHTML</li>
               <li>CSS, Sass</li>
               <li>JavaScript, NodeJs</li>
               <li>PHP</li>
             </ul>
           </li>
-          <li>C++</li>
-          <li>Python</li>
+          <li>C++, Python</li>
           <li>
             <strong>Tools</strong>
             <ul>
@@ -153,7 +151,7 @@
             </ul>
           </li>
           <li>
-            <strong>Database:</strong> MySQL, MongoDB</li>
+            <strong>Database:</strong> MySQL</li>
           <li>
             <strong>Deployment:</strong> AWS, Google App Engine, Github/Gitlab Pages</li>
           <li>
@@ -175,11 +173,19 @@
           <li>Web Development</li>
           <li>Participating in hackathons</li>
           <li>Reading developer blogs</li>
-          <li>Playing Basketball, listening to Music</li>
+          <li>Playing basketball, listening to music, gardening</li>
         </ul>
       </div>
     </div>
   </main>
+  <script>
+    function loadCss(srcs) {
+      srcs.forEach(src => {
+        var l=document.createElement('link');l.href=src,l.setAttribute('rel','stylesheet'),l.setAttribute('media', 'all'),document.documentElement.firstChild.appendChild(l);
+      });
+    };
+    loadCss(['https://fonts.googleapis.com/css?family=Lato:400,700']);
+    </script>
 </body>
 
 </html>
