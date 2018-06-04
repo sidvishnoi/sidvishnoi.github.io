@@ -1,6 +1,6 @@
 :root {
-  --font-family: 'Lato', 'Open Sans', 'Helvetica Neue', 'Helvetica', sans-serif;
-  --font-monospace: 'DejaVu Sans Mono', 'Fira Code', 'Courier New', Courier, monospace;
+  --font-family: 'Lato', 'Helvetica', 'Open Sans', 'Arial', sans-serif;
+  --font-monospace: 'DejaVu Sans Mono', 'Fira Code', 'Courier New', monospace;
   --border-main: 2px solid #ccc;
   --left-width: 63%;
   --right-width: 37%;
