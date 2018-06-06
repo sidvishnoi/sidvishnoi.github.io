@@ -24,7 +24,8 @@ body {
   width: 100%;
   max-width: 21cm;
   margin: 0 auto;
-  height: 100%;
+  min-height: 29.7cm;
+  min-height: calc(29.7cm + 0.5cm);
   display: flex;
   flex-direction: column;
   font-family: var(--font-family);
@@ -161,6 +162,7 @@ div>ul>li li {
     /* A4 sheet */
     width: 21cm;
     height: 29.7cm;
+    max-height: 29.7cm;
   }
 }
 
