@@ -15,7 +15,7 @@
   <h1 class="title">
     <span>Sudhanshu</span>
     <span>Vishnoi</span>
-    <a href="/assets/files/sudhanshu-vishnoi-resume.pdf" class="noprint" title="Download Resume as PDF"><img width="14px" height="14px" src="/assets/icons/pdf.svg" alt="pdf"> PDF version</a>
+    <a href="sudhanshu-vishnoi-resume.pdf" class="noprint" title="Download Resume as PDF"><img width="14px" height="14px" src="/assets/icons/pdf.svg" alt="pdf"> PDF version</a>
   </h1>
   <main>
     <div class="left">
@@ -178,6 +178,10 @@
       });
     };
     loadCss(['https://fonts.googleapis.com/css?family=Lato:400,700']);
+
+    if ('serviceWorker' in navigator) {
+      navigator.serviceWorker.register('resume-service-worker.js');
+    }
     </script>
 </body>
 
