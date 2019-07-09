@@ -1,4 +1,4 @@
-const version = '506c824';
+const version = '299c5bd';
 const VERSIONS = {
   offline: 'offline#' + version,
   tmp: 'tmp#' + version,
