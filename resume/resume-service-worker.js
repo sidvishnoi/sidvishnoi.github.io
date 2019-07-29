@@ -1,72 +1,49 @@
-const version = '098b2b';
-const VERSIONS = {
-  offline: 'offline#' + version,
-  tmp: 'tmp#' + version,
-};
-const OFFLINE_ASSETS = [
-  '/resume/',
-  '/resume/index.html',
-  '/assets/css/resume.css',
-  '/assets/icons/pdf.svg',
-  '/assets/icons/github.svg',
-  '/assets/icons/linkedin.svg',
-  '/assets/icons/stackoverflow.svg',
-  'sudhanshu-vishnoi-resume.pdf',
-];
+// @ts-check
+const __version = "42849ae";
+const CACHE = "resume#" + __version;
 
-self.addEventListener('install', event => {
-  event.waitUntil(
-    caches
-      .open(VERSIONS.offline)
-      .then(cache => cache.addAll(OFFLINE_ASSETS))
-      .then(() => self.skipWaiting())
-  );
-});
+const sw = /** @type {ServiceWorkerGlobalScope} */ (self);
 
-self.addEventListener('fetch', event => {
+sw.addEventListener("install", () => sw.skipWaiting());
+
+sw.addEventListener("fetch", async event => {
   if (new URL(event.request.url).hostname !== location.hostname) {
     return;
   }
 
   event.respondWith(
     caches
-      .match(event.request)
+      .open(CACHE)
+      .then(cache => cache.match(event.request))
       .then(cached => {
-        // return cached responses immediately and meanwhile pull
-        // a network response and store that in the cache.
-        const networked = fetch(event.request)
-          .then(fetchedFromNetwork, unableToResolve)
-          .catch(unableToResolve);
-        return cached || networked;
-      })
+        if (event.request.headers.get("content-type") !== "text/html") {
+          return cached || fetchAndCache(event.request);
+        } else {
+          // return cached response immediately and meanwhile pull
+          // a network response and store that in the cache for next time.
+          const networked = fetchAndCache(event.request);
+          return cached || networked;
+        }
+      }),
   );
 
-  function fetchedFromNetwork(response) {
+  /** @param {FetchEvent['request']} request */
+  async function fetchAndCache(request) {
+    const response = await fetch(request);
     const cacheCopy = response.clone();
-    caches
-      .open(VERSIONS.tmp)
-      .then(cache => cache.put(event.request, cacheCopy));
+    const cache = await caches.open(CACHE);
+    await cache.put(request, cacheCopy);
     return response;
   }
-
-  function unableToResolve () {
-    // fetch request failed in both cache and network
-    return new Response('<h1><pre>Service Unavailable</pre></h1>', {
-      status: 503,
-      statusText: 'Service Unavailable',
-      headers: new Headers({ 'Content-Type': 'text/html' }),
-    });
-  }
 });
 
-self.addEventListener('activate', event => {
-  const deleteOldCaches = new Promise(resolve => {
-    return caches.keys().then(keys => {
-      const deleteCaches = keys
-        .filter(key => key !== VERSIONS.offline)
-        .map(key => caches.delete(key));
-      return Promise.all(deleteCaches).then(resolve);
-    });
-  });
-  event.waitUntil(deleteOldCaches);
+sw.addEventListener("activate", async () => {
+  const keys = await caches.keys();
+  const toDelete = keys.filter(key => key !== CACHE);
+  await Promise.all(toDelete.map(key => caches.delete(key)));
 });
+
+async function requestRefresh() {
+  const clients = await sw.clients.matchAll();
+  clients.forEach(client => client.postMessage("refresh"));
+}

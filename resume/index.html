@@ -5,7 +5,7 @@
   <meta charset="utf-8" />
   <title>Sudhanshu Vishnoi | Resume</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" type="text/css" media="all" href="/assets/css/resume.css" />
+  <link rel="stylesheet" type="text/css" media="all" href="resume.css" />
   <meta name="description" content="Sudhanshu Vishnoi (Sid Vishnoi) is passionate about web development and problem solving. He loves to work with JavaScript and C++.">
 </head>
 
@@ -168,7 +168,9 @@
     loadCss(['https://fonts.googleapis.com/css?family=Lato:400,700']);
 
     if ('serviceWorker' in navigator) {
-      navigator.serviceWorker.register('resume-service-worker.js');
+      navigator.serviceWorker.register('resume-service-worker.js', {
+        scope: '/resume/',
+      });
     }
     </script>
 </body>
