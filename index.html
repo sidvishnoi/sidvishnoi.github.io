@@ -5,190 +5,73 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="Sudhanshu Vishnoi is passionate about web development and problem solving. He loves to work with JavaScript and C++.">
-    <title>
-      Sudhanshu Vishnoi
-    </title>
-    <noscript>
-      <link rel="stylesheet" type="text/css" media="screen" href=
-      "/assets/css/common.css">
-      <link rel="stylesheet" type="text/css" media="screen" href=
-      "/assets/css/main.css">
-      <link href="https://fonts.googleapis.com/css?family=Fira+Mono|Lato:400,700"
-      rel="stylesheet">
-    </noscript>
+    <title>Sudhanshu Vishnoi</title>
+    <link rel="stylesheet" href="home.css">
+    <link href="https://fonts.googleapis.com/css?family=Fira+Mono|Lato:400,700"
+    rel="stylesheet">
+    <script src="script.js" defer></script>
   </head>
   <body>
-    <header>
-      <h1>
-        <a href="/">Sudhanshu <span>Vishnoi</span></a>
-      </h1>
-      <p class="subtitle">
-        Student. Web Developer. AKA Sid Vishnoi.
-      </p>
+    <dark-mode-switcher></dark-mode-switcher>
+    <header id="home-banner">
+      <section>
+        <img src="/assets/images/me.jpg" alt="A photograph of Sudhanshu Vishnoi">
+        <h1><a href="/">Sudhanshu Vishnoi</a></h1>
+        <p>Hey there! I'm a web developer and software engineer. I'm enthusiastic about front-end performance and accessibility and building software in general.<br>I'm a recent grad and I'm looking for a job.</p>
+      </section>
+      <b class="clearfix"></b>
+      <span class="vert webdev">Web Developer</span>
+      <span class="vert softengg">Software Engineer</span>
+      <nav>
+        <a href="/resume/">Resume</a>
+        <a href="#projects">Projects</a>
+      </nav>
     </header>
-    <section class="summary">
-      <img class="avatar" src="/assets/images/me.jpg" alt="Sudhanshu Vishnoi">
-      <div class="text">
-        <p>
-          I'm a student pursuing Masters in Computer Applications at University
-          of Delhi. <br>
-          I'm passionate about web development, focusing on performance, accessibility and UX.<br>
-          I like to create problems (and of course love to solve them).
-        </p>
-        <p>
-          I'm currently looking for a job! Here is my <a href="/resume/">resume</a>. 
-          I'd love to <a href="mailto:sudhanshuvishnoi@gmail.com">get in touch</a>!
-        </p>
-      </div>
-    </section>
-    <section class="info">
-      <h2>
-        Projects
-      </h2>
+    <section class="projects">
+      <h2 id="projects">Projects</h2>
       <ul>
         <li>
-          <p>
-            <a href="/bleu/">Bleu</a>: a fully featured and extensible smart
-            static website generator. With Bleu, every build is incremental
-            build. Built with NodeJS.
+          <h3><a href="/bleu/">Bleu</a></h3>
+          <p>a fully featured and extensible smart static website generator. With Bleu, every build is incremental build. Built with NodeJS.
           </p>
         </li>
         <li>
-          <p>
-            <a href="/fb-dev-interest/">Merge Facebook Dev Circles by
-            Interests</a>: A Chrome extension that filters through Facebook Dev
-            Circles around the world to get only the interesting posts in your
-            feed.
+          <h3><a href="/fb-dev-interest/">Merge Facebook Dev Circles by Interests</a></h3>
+          <p>A Chrome extension that filters through Facebook Dev Circles around the world to get only the interesting posts in your feed.
           </p>
         </li>
         <li>
-          <p>
-            <a href="/socket-chat/">Socket Chat</a>: A Chat Application using
-            Unix network sockets featuring user authentication, multiple
-            chatrooms and private messaging & terminal based user interface
-            (inspired by IRC).
+          <h3><a href="/socket-chat/">Socket Chat</a>
+      </h3>
+      <p>A Chat Application using Unix network sockets featuring user authentication, multiple chatrooms and private messaging &amp; terminal based user interface (inspired by IRC).
           </p>
         </li>
         <li>
-          <p>
-            <a href="/ducs/">du -cs</a>: unofficial student managed website for
-            DUCS.
+          <h3><a href="/ducs/">du -cs</a></h3>
+          <p>unofficial student managed website for DUCS.
           </p>
         </li>
         <li>
-          <p>
-            <a href="/filesystem-assignment/">Filesystem Simulation</a>: A
-            linked list+FAT-like file-system simulation in C++, along with
-            teaching material for the same.
+          <h3><a href="/filesystem-assignment/">Filesystem Simulation</a></h3>
+          <p>A linked list+FAT-like file-system simulation in C++, along with teaching material for the same.
           </p>
         </li>
         <li>
-          <p>
-            <a rel="noopener" href=
-            "https://github.com/sidvishnoi/jekyll-comments">jekyll-comments</a>:
-            Static Comments for your Jekyll website.
+          <h3><a rel="noopener" href="https://github.com/sidvishnoi/jekyll-comments">jekyll-comments</a></h3>
+          <p> Static Comments for your Jekyll website.
           </p>
         </li>
         <li>
-          <p>
-            <a rel="noopener" href=
-            "https://github.com/sidvishnoi/jekyll_helper">jekyll_helper</a>:
-            Jekyll helper scripts written in Python to help you manage large
-            Jekyll website (supports partial builds).
+          <h3><a rel="noopener" href="https://github.com/sidvishnoi/jekyll_helper">jekyll_helper</a></h3>
+          <p>Jekyll helper scripts written in Python to help you manage large Jekyll website (supports partial builds).
           </p>
         </li>
         <li>
-          <p>
-            <a rel="noopener" href=
-            "https://github.com/sidvishnoi/zoohackathon-2017">unTrap</a>: HTML5
-            game using Phaser.js. Lead a team of 4 at Zoohackathon 2017.
-          </p>
-        </li>
-        <li>
-          <p>
-            An attendance management system (for both students and teachers)
-            which leveraged a custom built "hack" by using Google Sheets as a
-            server and database.​
-          </p>
-          <details>
-            <summary>
-              See bonus panel
-            </summary>
-            <p>
-              During T-hacks 2017 hackathon at DTU in Feb 2017. (This was when
-              I thought that the word hackathon was related to hacking stuff.
-              Back then, I didn't know about backend.)
-            </p>
-          </details>
-        </li>
-      </ul>
-    </section>
-    <section>
-      <h2>
-        Extra-curricular
-      </h2>
-      <ul>
-        <li>
-          <p>
-            Contributor to <a rel="noopener" href=
-            "https://github.com/w3c/respec">w3c/respec</a> <time>Mar 3, 2018 -
-            present</time>.
-          </p>
-        </li>
-        <li>
-          <p>
-            Owner of <a rel="noopener" href=
-            "http://www.hoopsvilla.com">hoopsvilla.com</a> <time>Jul 29, 2013 -
-            present</time>.
-          </p>
-        </li>
-        <li>
-          <p>
-            Winner of Facebook Developer Circles Challenge 2017 ( <a rel=
-            "noopener" href=
-            "https://devpost.com/software/fb-dev-interest">Devpost</a>)
-            <time>Dec 20, 2017</time>
-          </p>
-        </li>
-        <li>
-          <p>
-            Participated in multiple hackathons like <a rel="noopener" href=
-            "https://devpost.com/software/untrap">Zoohackathon 2017</a>,
-            <a rel="noopener" href=
-            "https://medium.com/@WWCode_Delhi/code-off-2017-an-evening-of-code-collaboration-and-fun-e611feda225">
-            Code-off</a>, T-hacks.
-          </p>
-        </li>
-        <li>
-          <p>
-            Technical Lead at <a rel="noopener" href=
-            "https://www.ducs.in/sankalan/">Sankalan 2018</a> - annual tech
-            fest of <a rel="noopener" href="http://cs.du.ac.in">DUCS</a>
-            <time>Jan 2018 - Apr 2018</time>.
-          </p>
-        </li>
-        <li>
-          <p>
-            Editor for <a rel="noopener" href=
-            "https://ducs.in/srijan/">Srijan</a> - annual magazine of DUCS in
-            2017, 2018.
-          </p>
-        </li>
-        <li>
-          <p>
-            Qualified Google Code Jam in 2017, 2018.
+          <h3><a rel="noopener" href="https://github.com/sidvishnoi/zoohackathon-2017">unTrap</a></h3>
+          <p>HTML5 game using Phaser.js. Lead a team of 4 at Zoohackathon 2017.
           </p>
         </li>
       </ul>
-    </section>
-    <section>
-      <h2>
-        Technical Exposure
-      </h2>
-      <p>
-        If you're interested in knowing what technology stack I am experienced
-        with, see: <a href="/skills/">sidvishnoi.github.io/skills/</a>.
-      </p>
     </section>
     <section class="social">
       <a target="_blank" title="@sidvishnoi on Github" rel="noopener" href=
@@ -207,13 +90,5 @@
       "https://codepen.io/sidvishnoi/" class="codepen"><img src=
       "/assets/icons/codepen.svg" alt="codepen"></a>
     </section>
-    <script>
-    function loadCss(srcs) {
-      srcs.forEach(src => {
-        var l=document.createElement('link');l.href=src,l.setAttribute('rel','stylesheet'),document.documentElement.firstChild.appendChild(l);
-      });
-    };
-    loadCss(['/assets/css/common.css', '/assets/css/main.css', 'https://fonts.googleapis.com/css?family=Fira+Mono|Lato:400,700']);
-    </script>
   </body>
 </html>
