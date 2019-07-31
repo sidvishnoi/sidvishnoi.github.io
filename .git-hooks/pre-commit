@@ -1,8 +1,0 @@
-#!/usr/bin/env bash
-
-# replace first line of service worker with present hash of resume.html
-serviceWorker=resume/resume-service-worker.js
-resumeHtml=resume/index.html
-prevCommit=$(git hash-object $resumeHtml | cut -c1-7)
-sed -i -e "1s/.*/const version = '$prevCommit';/g" $serviceWorker
-git add $serviceWorker
