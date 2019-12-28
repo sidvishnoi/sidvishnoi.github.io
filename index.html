@@ -1,15 +1,13 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="light">
   <head>
     <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="Sudhanshu Vishnoi is passionate about web development and problem solving. He loves to work with JavaScript and C++.">
+    <meta name="viewport" content="width=device-width">
     <title>Sudhanshu Vishnoi</title>
     <link rel="stylesheet" href="home.css">
-    <link href="https://fonts.googleapis.com/css?family=Fira+Mono|Lato:400,700"
-    rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Inconsolata" rel="stylesheet">
     <script src="script.js" defer></script>
+
     <!-- Google Analytics, Google Search Console verification -->
     <meta name="google-site-verification" content="HkQJK3tU4Dp1ea6G3r75SOFGp2avZolx9Ra70jPNgTQ">
     <script defer src="https://www.googletagmanager.com/gtag/js?id=UA-145303628-1"></script>
@@ -21,21 +19,58 @@
     </script>
   </head>
   <body>
-    <dark-mode-switcher></dark-mode-switcher>
-    <header id="home-banner">
-      <section>
-        <img src="/assets/images/me.jpg" alt="A photograph of Sudhanshu Vishnoi">
-        <h1><a href="/">Sudhanshu Vishnoi</a></h1>
-        <p>Hey there! I'm a web developer and software engineer. I'm enthusiastic about front-end performance and accessibility and building software in general.<br>I'm a recent grad and I'm looking for a job.</p>
-      </section>
-      <b class="clearfix"></b>
-      <span class="vert webdev">Web Developer</span>
-      <span class="vert softengg">Software Engineer</span>
-      <nav>
-        <a href="/resume/">Resume</a>
-        <a href="#projects">Projects</a>
+    <a href="#main" class="visually-hidden" id="jump-to-main">Jump to main content</a>
+
+    <aside id="preferences" class="pref" hidden>
+      <form name="preferences">
+        <fieldset id="theme">
+          <legend for="name">Color Scheme</legend>
+          <label><input type="radio" name="theme" value="light"><span>Light</span></label>
+          <label><input type="radio" name="theme" value="dark"><span>Dark</span></label>
+        </fieldset>
+      </form>
+    </aside>
+
+    <div class="splash-borders"><div class="top"></div><div class="right"></div><div class="bottom"></div><div class="left"></div></div>
+
+    <div class="subnav">
+      <button id="preferences-menu-toggle" aria-label="Change visual preferences">
+        <svg width=24 height=24 focusable="false" aria-hidden="true"><use xlink:href="/assets/icons/icons.svg#icon-preferences"></use></svg>
+        <span>Preferences</span>
+      </button>
+
+      <nav class="social">
+        <a title="@sidvishnoi on Github" href="https://github.com/sidvishnoi" class="icon-github">
+          <svg width=24><use xlink:href="/assets/icons/social.svg#icon-github"></use></svg>
+        </a>
+        <a title="@sid_vishnoi on Twitter"href="https://twitter.com/sid_vishnoi" class="icon-twitter">
+          <svg width=24><use xlink:href="/assets/icons/social.svg#icon-twitter"></use></svg>
+        </a>
+        <a title="@sudhanshu-vishnoi on Linkedin" href="https://linkedin.com/in/sudhanshu-vishnoi" class="icon-linkedin">
+          <svg width=24><use xlink:href="/assets/icons/social.svg#icon-linkedin"></use></svg>
+        </a>
+        <a title="@sidvishnoi on Dev.to" href="https://dev.to/sidvishnoi" class="icon-dev">
+          <svg width=24><use xlink:href="/assets/icons/social.svg#icon-dev"></use></svg>
+        </a>
+        <a title="@sid-vishnoi on StackOverflow" href="https://stackoverflow.com/users/3367669/sid-vishnoi" class="icon-stackoverflow">
+          <svg width=24><use xlink:href="/assets/icons/social.svg#icon-stackoverflow"></use></svg>
+        </a>
+        <a title="@sidvishnoi on CodePen" href="https://codepen.io/sidvishnoi/" class="icon-codepen">
+          <svg width=24><use xlink:href="/assets/icons/social.svg#icon-codepen"></use></svg>
+        </a>
+      </nav>
+    </div>
+
+    <header class="header" id="main">
+      <h1 class="title"><a href="/"><span>Sudhanshu</span> <span>Vishnoi</span></a></h1>
+      <p class="subtitle">I like web development and building software.</p>
+      <nav class="primary">
+        <a href="/about" class="button">About</a>
+        <a href="/resume" class="button">Resume</a>
+        <a href="/contact" class="button">Contact</a>
       </nav>
     </header>
+
     <section class="projects">
       <h2 id="projects">Projects</h2>
       <ul>
@@ -81,23 +116,6 @@
           </p>
         </li>
       </ul>
-    </section>
-    <section class="social">
-      <a target="_blank" title="@sidvishnoi on Github" rel="noopener" href=
-      "https://github.com/sidvishnoi" class="github"><img src=
-      "/assets/icons/github.svg" alt="github"></a> <a target="_blank" title=
-      "@sudhanshu-vishnoi on Linkedin" rel="noopener" href=
-      "https://linkedin.com/in/sudhanshu-vishnoi" class="linkedin"><img src=
-      "/assets/icons/linkedin.svg" alt="linkedin"></a> <a target="_blank"
-      title="@sid-vishnoi on StackOverflow" rel="noopener" href=
-      "https://stackoverflow.com/users/3367669/sid-vishnoi" class=
-      "stackoverflow"><img src="/assets/icons/stackoverflow.svg" alt=
-      "stackoverflow"></a> <a target="_blank" title="@sid_vishnoi on Twitter"
-      rel="noopener" href="https://twitter.com/sid_vishnoi" class=
-      "twitter"><img src="/assets/icons/twitter.svg" alt="twitter"></a>
-      <a target="_blank" title="@sidvishnoi on CodePen" rel="noopener" href=
-      "https://codepen.io/sidvishnoi/" class="codepen"><img src=
-      "/assets/icons/codepen.svg" alt="codepen"></a>
     </section>
   </body>
 </html>
