@@ -1,0 +1,24 @@
+[[redirects]]
+  from = "/bleu"
+  to = "https://github.com/sidvishnoi/sidvishnoi.github.io/blob/master/notes/bleu.md"
+  status = 302
+
+[[redirects]]
+  from = "/ducs"
+  to = "https://github.com/sidvishnoi/sidvishnoi.github.io/blob/master/notes/ducs.md"
+  status = 302
+
+[[redirects]]
+  from = "/fb-dev-interest"
+  to = "https://github.com/sidvishnoi/sidvishnoi.github.io/blob/master/notes/fb-dev-interest.md"
+  status = 302
+
+[[redirects]]
+  from = "/filesystem-assignment"
+  to = "https://github.com/sidvishnoi/sidvishnoi.github.io/blob/master/notes/filesystem-assignment.md"
+  status = 302
+
+[[redirects]]
+  from = "/socket-chat"
+  to = "https://github.com/sidvishnoi/sidvishnoi.github.io/blob/master/notes/socket-chat.md"
+  status = 302
