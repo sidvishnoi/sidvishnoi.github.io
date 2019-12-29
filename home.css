@@ -497,7 +497,7 @@ fieldset {
 .pref label {
   position: relative;
 }
-.pref input[type="radio"] {
+.pref input[type='radio'] {
   height: 100%;
   left: 0;
   opacity: 0.0001;
@@ -505,9 +505,9 @@ fieldset {
   top: 0;
   width: 100%;
 }
-.pref label:focus,
+.pref label:focus-within,
 .pref label:hover,
-.pref label:hover input {
+.pref input:focus + span {
   outline: 1px dashed;
   cursor: pointer;
 }
