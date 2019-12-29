@@ -451,11 +451,7 @@ html[data-theme='dark'] .social a {
   --icon-color: #1ca2f2;
 }
 .social a.icon-github {
-  --icon-color: #616264;
-}
-.social a.icon-github:hover,
-.social a.icon-github:focus {
-  background-color: #fdfdfd;
+  --icon-color: #0366d6;
 }
 .social a.icon-dev {
   --icon-color: #4e57ef;
