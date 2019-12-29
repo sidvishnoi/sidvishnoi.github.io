@@ -271,9 +271,6 @@ nav.primary a:first-child {
 nav.primary a:last-child {
   margin-right: 0;
 }
-html[data-theme='dark'] nav.primary a {
-  filter: saturate(85%);
-}
 nav.primary a:nth-child(1) {
   transform: rotate(-1deg);
   --bg-color: var(--color-b);
@@ -504,17 +501,19 @@ fieldset {
 .pref label {
   position: relative;
 }
-#theme input {
+.pref input[type="radio"] {
   height: 100%;
   left: 0;
   opacity: 0.0001;
   position: absolute;
   top: 0;
   width: 100%;
-  cursor: pointer;
 }
-#theme input:focus + span {
+.pref label:focus,
+.pref label:hover,
+.pref label:hover input {
   outline: 1px dashed;
+  cursor: pointer;
 }
 #theme span {
   display: inline-block;
@@ -532,4 +531,9 @@ fieldset {
   --bg-color: var(--theme-dark-background);
   --text-color: var(--theme-dark-color);
   --border-color: var(--theme-dark-color-light);
+}
+
+html[data-theme='dark'] .splash-borders > div,
+html[data-theme='dark'] nav.primary a {
+  filter: saturate(85%);
 }
