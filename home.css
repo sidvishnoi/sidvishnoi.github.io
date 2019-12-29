@@ -272,17 +272,14 @@ nav.primary a:last-child {
   margin-right: 0;
 }
 nav.primary a:nth-child(1) {
-  transform: rotate(-1deg);
   --bg-color: var(--color-b);
   --bg-color-alt: var(--color-b-alt);
 }
 nav.primary a:nth-child(2) {
-  transform: rotate(-2deg);
   --bg-color: var(--color-a);
   --bg-color-alt: var(--color-a-alt);
 }
 nav.primary a:nth-child(3) {
-  transform: rotate(2deg);
   --bg-color: var(--color-c);
   --bg-color-alt: var(--color-c-alt);
 }
