@@ -1,0 +1,29 @@
+{
+  "name": "sidvishnoi.github.io",
+  "version": "1.0.0",
+  "description": "",
+  "scripts": {
+    "build": "eleventy",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sidvishnoi/sidvishnoi.github.io.git"
+  },
+  "keywords": [],
+  "author": "Sid Vishnoi <sidvishnoi8@gmail.com> (https://sidvishnoi.github.io/)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/sidvishnoi/sidvishnoi.github.io/issues"
+  },
+  "homepage": "https://github.com/sidvishnoi/sidvishnoi.github.io#readme",
+  "devDependencies": {
+    "@11ty/eleventy": "^0.11.0",
+    "gray-matter": "^4.0.2",
+    "gulp": "^4.0.2",
+    "gulp-rename": "^2.0.0",
+    "liquid": "^5.0.0",
+    "sass": "^1.26.10",
+    "through2": "^4.0.2"
+  }
+}
