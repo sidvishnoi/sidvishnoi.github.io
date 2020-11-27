@@ -213,13 +213,19 @@ img {
   margin: 0 auto;
 }
 
+.main-wrapper {
+  display: grid;
+  grid-template-columns: repeat(minmax(30ch, 1fr) auto);
+  gap: 1em;
+}
+
 .header {
-  text-align: center;
   line-height: 1.2;
-  padding: 3vmin 1vmin;
+  font-size: 1.6rem;
+  padding: 1em;
 }
 .header .title {
-  font-size: 8vmin;
+  font-size: 2.5em;
   text-transform: uppercase;
 }
 .header .title a {
@@ -230,7 +236,7 @@ img {
   font-weight: 400;
 }
 .header .subtitle {
-  font-size: 5vmin;
+  /* font-size: 0.8em; */
 }
 
 .button {
@@ -241,8 +247,9 @@ img {
   text-decoration: none;
   background-color: var(--bg-color);
   display: inline-block;
-  padding: 0.8rem;
+  padding: 0.5em;
   text-transform: uppercase;
+  font-size: 1em;
   font-weight: bold;
   color: var(--text-color);
   box-shadow: 8px 7px 0px 0px var(--bg-color-alt);
@@ -259,8 +266,7 @@ img {
 nav.primary {
   display: flex;
   flex-wrap: wrap;
-  padding: 1rem;
-  justify-content: center;
+  padding: 1em 0;
 }
 nav.primary a {
   margin: 0 0.8rem;
@@ -308,7 +314,7 @@ nav.primary a:nth-child(3) {
   font-size: 2em;
   display: flex;
   width: 100%;
-  margin: 1em auto;
+  margin: 0 auto 1em;
   justify-content: center;
   align-items: center;
   text-align: center;
@@ -333,7 +339,6 @@ nav.primary a:nth-child(3) {
 }
 
 .projects li {
-  text-align: right;
   padding: 1em;
 }
 
@@ -358,6 +363,7 @@ nav.primary a:nth-child(3) {
   flex: 1;
   height: 1em;
   background: transparent;
+  order: 2;
 }
 
 .projects:not(:focus-within) li:hover h3:before,
